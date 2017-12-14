@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="MainMenu" Height="328.895" Width="637.394">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="71*"/>
+            <RowDefinition Height="158*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="27*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Button"  Grid.Row="1"/>
+        <Button Content="Detal" Grid.Row="1" Grid.Column="1"/>
+        <Button Content="Dvigun" Grid.Row="1" Grid.Column="2"/>
+        <Button Content="Korpus" Grid.Row="1" Grid.Column="3"/>
     </Grid>
 </Window>

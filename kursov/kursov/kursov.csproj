@@ -73,7 +73,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Context\Brand.cs" />
+    <Compile Include="Context\BrandCar.cs" />
+    <Compile Include="Context\Details.cs" />
+    <Compile Include="Context\DetailsClass.cs" />
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="Context\Login.cs" />
     <Compile Include="Context\Role.cs" />
@@ -86,6 +88,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201712141356189_db.cs" />
+    <Compile Include="Migrations\201712141356189_db.Designer.cs">
+      <DependentUpon>201712141356189_db.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -99,6 +106,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201712141356189_db.resx">
+      <DependentUpon>201712141356189_db.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

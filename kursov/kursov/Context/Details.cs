@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace kursov.Context
 {
-    public class Brand
+    public class Details
     {
         [Key]
-        public int Id { get; set; }
-        [Required,MaxLength(length:100)]
-        public string NameBrand { get; set; }
+        public int ID { get; set; }
+        [Required,MaxLength(length:200)]
+        public string NameDetal { get; set; }
+        
+
     }
 }
