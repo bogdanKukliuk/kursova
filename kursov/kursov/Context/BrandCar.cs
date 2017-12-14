@@ -11,8 +11,8 @@ namespace kursov.Context
     {
         [Key]
         public int Id { get; set; }
-        [Required,MaxLength(length:100)]
-        public string NameBrand { get; set; }
-        public DetailsClass detailsClass { get; set; }
+        [Required]
+        public int NameBrand { get; set; }
+        public ICollection<DetailsClass> detailsClass { get; set; }
     }
 }

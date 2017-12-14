@@ -17,5 +17,6 @@ namespace kursov.Context
         public DbSet<Role> role { get; set; }
         public DbSet<BrandCar> brand { get; set; }
         public DbSet<DetailsClass> detalClass { get; set; }
+        public DbSet<Details> detals { get; set; }
     }
 }

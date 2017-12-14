@@ -13,7 +13,6 @@ namespace kursov.Context
         public int ID { get; set; }
         [Required,MaxLength(length:200)]
         public string NameDetal { get; set; }
-        
-
+        public ICollection <DetailsClass> detailsClass { get; set; }
     }
 }

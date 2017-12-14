@@ -12,11 +12,7 @@ namespace kursov.Context
         [Key]
         public int ID { get; set; }
         [Required]
-        public int IdEngine { get; set; }
-        [Required]
-        public int IdHull { get; set; }
-        [Required]
-        public int IdElectronics { get; set; }
-        public BrandCar brandCar { get; set; }
+        public int Name { get; set; }
+        public ICollection <BrandCar> brandCar { get; set; }
     }
 }
