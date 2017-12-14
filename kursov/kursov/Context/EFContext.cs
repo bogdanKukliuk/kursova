@@ -15,5 +15,6 @@ namespace kursov.Context
 
         public DbSet<Login> login { get; set; }
         public DbSet<Role> role { get; set; }
+        public DbSet<Brand> brand { get; set; }
     }
 }

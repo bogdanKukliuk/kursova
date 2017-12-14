@@ -17,6 +17,6 @@ namespace kursov.Context
         [Required, MaxLength(length: 228)]
         public string Password { get; set; }
 
-        //public virtual ICollection<Role> role { get; set; }
+        public virtual ICollection<Role> role { get; set; }
     }
 }
