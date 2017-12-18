@@ -89,9 +89,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712181356368_team.cs" />
-    <Compile Include="Migrations\201712181356368_team.Designer.cs">
-      <DependentUpon>201712181356368_team.cs</DependentUpon>
+    <Compile Include="Migrations\201712181548439_der.cs" />
+    <Compile Include="Migrations\201712181548439_der.Designer.cs">
+      <DependentUpon>201712181548439_der.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,8 +107,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712181356368_team.resx">
-      <DependentUpon>201712181356368_team.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712181548439_der.resx">
+      <DependentUpon>201712181548439_der.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
