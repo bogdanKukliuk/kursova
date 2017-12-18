@@ -15,7 +15,7 @@ namespace kursov.Context
         public string NameDetal { get; set; }
         [Required]
         public int Price { get; set; }
-        public ICollection <DetailsClass> detailsClass { get; set; }
-        public ICollection<Bin> bin { get; set; }
+        public ICollection <DetailsClass> DetailsClass { get; set; }
+        public ICollection<Bin> Bin { get; set; }
     }
 }
