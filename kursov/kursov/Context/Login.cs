@@ -21,5 +21,6 @@ namespace kursov.Context
         public int Mony { get; set; }
         public ICollection<Role> Role { get; set; }
         public Bin Bin { get; set; }
+        public ICollection<BrandCar> BrandCar { get; set; }
     }
 }

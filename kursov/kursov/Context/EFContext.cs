@@ -13,11 +13,11 @@ namespace kursov.Context
         public EFContext() : base("connect")
         { }
 
-        public DbSet<Login> login { get; set; }
-        public DbSet<Role> role { get; set; }
-        public DbSet<BrandCar> brand { get; set; }
-        public DbSet<DetailsClass> detalClass { get; set; }
-        public DbSet<Details> detals { get; set; }
-        public DbSet<Bin> bin { get; set; }
+        public DbSet<Login> Login { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<BrandCar> Brand { get; set; }
+        public DbSet<DetailsClass> DetalClass { get; set; }
+        public DbSet<Details> Detals { get; set; }
+        public DbSet<Bin> Bin { get; set; }
     }
 }

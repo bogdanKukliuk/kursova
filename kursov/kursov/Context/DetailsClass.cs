@@ -13,6 +13,7 @@ namespace kursov.Context
         public int ID { get; set; }
         [Required]
         public int Name { get; set; }
-        public ICollection <BrandCar> brandCar { get; set; }
+        public ICollection <BrandCar> BrandCar { get; set; }
+        public ICollection <Details> Details { get; set; }
     }
 }

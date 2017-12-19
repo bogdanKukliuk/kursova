@@ -16,7 +16,7 @@ namespace kursov.Context
         public string NymeProdukt { get; set; }
         [Required]
         public int Price { get; set; }
-        public Details details { get; set; }
+        public ICollection <Details> Details { get; set; }
         public Login Login { get; set; }
     }
 }
