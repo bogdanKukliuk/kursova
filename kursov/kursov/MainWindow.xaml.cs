@@ -47,11 +47,11 @@ namespace kursov
 
         private void DoConnect(object sender, DoWorkEventArgs e)
         {
-            foreach (var item in _efContext.login.ToList())
+            foreach (var item in _efContext.Login.ToList())
             {
                 if (txtEmail.Text == item.Email && txtPassword.Text == item.Password)
                 {
-                    var role = item.role.FirstOrDefault(r => r.RoleName == "Admin");
+                    var role = item.Role.FirstOrDefault(r => r.RoleName == "Admin");
 
                     if (role != null)
                     {
