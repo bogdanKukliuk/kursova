@@ -14,7 +14,7 @@
             <TextBox x:Name="txtEmail" Background="#FF464545" FontSize="20"/>
             <Label Content="Password" Foreground="White" FontSize="20"/>
             <TextBox x:Name="txtPassword" Background="#FF464545" FontSize="20"/>
-            <Button x:Name="btnSubmit" Content="Submit" Margin="60 20" Background="BlueViolet" FontSize="25"/>
+            <Button x:Name="btnSubmit" Content="Submit" Margin="60 20" Background="BlueViolet" FontSize="25" Click="btnSubmit_Click"/>
         </StackPanel>
     </Border>
 </Window>
