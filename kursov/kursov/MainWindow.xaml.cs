@@ -22,11 +22,11 @@ namespace kursov
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static EFContext _efContext;
+        private EFContext _efContext;
         private readonly BackgroundWorker backgroundWorker;
 
         private string role;
-        public string Role { set { role = value; } }
+        public string _Role { set { role = value; } }
         public MainWindow()
         {
             backgroundWorker = new BackgroundWorker();
@@ -42,28 +42,37 @@ namespace kursov
                 backgroundWorker.RunWorkerAsync();
             else
                 backgroundWorker.CancelAsync();
-
         }
 
         private void DoConnect(object sender, DoWorkEventArgs e)
         {
-            foreach (var item in _efContext.Login.ToList())
+            try
             {
-                if (txtEmail.Text == item.Email && txtPassword.Text == item.Password)
+                foreach (var item in _efContext.Login.ToList())
                 {
-                    var role = item.Role.FirstOrDefault(r => r.RoleName == "Admin");
+                    if (txtEmail.Text == item.Email && txtPassword.Text == item.Password)
+                    {
+                        var role = item.Role.FirstOrDefault(r => r.RoleName == "Admin");
 
-                    if (role != null)
-                    {
-                        Role = role.RoleName;
+                        if (role != null)
+                        {
+                            _Role = role.RoleName;
+                        }
+                        else
+                        {
+                            _Role = string.Empty;
+                        }
+                        MessageBox.Show("Test");
+                        break;
                     }
-                    else
-                    {
-                        Role = string.Empty;
-                    }
-                    break;
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            
         }
 
 
