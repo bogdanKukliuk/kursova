@@ -41,10 +41,14 @@ namespace kursov
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            
             if (!backgroundWorker.IsBusy)
                 backgroundWorker.RunWorkerAsync();
             else
                 backgroundWorker.CancelAsync();
+
+            MainMenu form = new MainMenu();
+            form.ShowDialog();
         }
 
         private void DoConnect(object sender, DoWorkEventArgs e)
@@ -59,37 +63,21 @@ namespace kursov
                 {
                     return txtPassword.Password;
                 }));
-                var user = _efContext.Login.Include(r=>r.Role).SingleOrDefault(u => u.Password == password &&
-                u.Email == email);
-                if(user!=null)
-                {
-                    MessageBox.Show(user.Email);
-                }
-                //foreach (var item in _efContext.Login.ToList())
-                //{
-                //    if (txtEmail.Text == item.Email &&  txtPassword.Password == item.Password)
-                //    {
-                //        var role = item.Role.FirstOrDefault(r => r.RoleName == "Admin");
+                var user = _efContext.Login.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
+                  u.Email == email);
 
-                //        if (role != null)
-                //        {
-                //            _Role = role.RoleName;
-                //        }
-                //        else
-                //        {
-                //            _Role = string.Empty;
-                //        }
-                //        MessageBox.Show("Test");
-                //        break;
-                //    }
-                //}
+                if (user != null)
+                {
+                    return;
+                }
+               
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
             }
-            
+
         }
 
 
