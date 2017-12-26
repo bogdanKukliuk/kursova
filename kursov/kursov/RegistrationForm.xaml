@@ -1,0 +1,25 @@
+﻿<Window x:Class="kursov.RegistrationForm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursov"
+        mc:Ignorable="d"
+        Title="RegistrationForm" Height="432.361" Width="364.513" Background="BlueViolet">
+    <Border Background="Black" CornerRadius="25" Margin="20">
+        <StackPanel Margin="20">
+            <Label Content="Registration" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
+            <Separator></Separator>
+            <Label Content="Email" Foreground="White" FontSize="20"/>
+            <TextBox x:Name="txtEmail" Background="#FF464545" FontSize="20" />
+            <Label Content="Password" Foreground="White" FontSize="20" Margin="0,0,0.4,0"/>
+            <PasswordBox x:Name="txtPassword" Background="#FF464545" FontSize="20" Margin="0,0,0.4,0"/>
+            <Label Content="Repeat Password" Foreground="White" FontSize="20" Margin="0,0,0.4,0"/>
+            <PasswordBox x:Name="txtPassword_R" Background="#FF464545" FontSize="20" Margin="0,0,0.4,0"/>
+            <Button x:Name="btnRegister" Content="Register" Margin="60,20,60.4,0" Background="BlueViolet" FontSize="25" Click="btnRegister_Click"/>
+            
+
+        </StackPanel>
+
+    </Border>
+</Window>

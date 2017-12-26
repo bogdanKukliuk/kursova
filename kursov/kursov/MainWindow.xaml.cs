@@ -85,5 +85,11 @@ namespace kursov
         {
             _efContext = new EFContext();
         }
+
+        private void Label_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RegistrationForm form = new RegistrationForm();
+            form.ShowDialog();
+        }
     }
 }
