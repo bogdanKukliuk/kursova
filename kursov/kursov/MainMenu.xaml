@@ -8,22 +8,24 @@
         Title="MainWindow" Background="BlueViolet">
     <Border Background="Black" CornerRadius="25" Margin="20">
         <StackPanel>
-            <Grid>
+            <Grid Height="460">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="274*"/>
                     <ColumnDefinition Width="51*"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="56*"/>
-                    <RowDefinition Height="281*"/>
+
                 </Grid.RowDefinitions>
-                <ComboBox x:Name="comBoxFlash" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Width="224" Height="27"/>
-                <Label Content="Швидкій вибір" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="178" Height="26"/>
-                <Button Content="Button" HorizontalAlignment="Left" Margin="1,22,0,0" VerticalAlignment="Top" Width="91" Height="31" Grid.Column="1"/>
+                <ComboBox x:Name="comBoxFlash" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" Width="224" Height="26"/>
+                <Label Content="Швидкій вибір" Foreground="White" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Width="178" Height="26"/>
+                <Button Content="Button" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="91" Height="31" Grid.Column="1"/>
+                <StackPanel HorizontalAlignment="Left" Background="Yellow" Height="100" VerticalAlignment="Top" Width="720" Grid.ColumnSpan="2">
+                    <StackPanel Height="100"/>
+                </StackPanel>
             </Grid>
         </StackPanel>
     </Border>
-    
-    
+
+
 
 </Window>
