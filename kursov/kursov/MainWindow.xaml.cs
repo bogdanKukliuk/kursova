@@ -41,10 +41,12 @@ namespace kursov
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
+            
             if (!backgroundWorker.IsBusy)
                 backgroundWorker.RunWorkerAsync();
             else
                 backgroundWorker.CancelAsync();
+
         }
 
         private void DoConnect(object sender, DoWorkEventArgs e)
@@ -59,44 +61,33 @@ namespace kursov
                 {
                     return txtPassword.Password;
                 }));
-                var user = _efContext.Login.Include(r=>r.Role).SingleOrDefault(u => u.Password == password &&
-                u.Email == email);
-                if(user!=null)
+                var user = _efContext.Login.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
+                  u.Email == email);
+
+                if (user != null)
                 {
-                    MessageBox.Show(user.Email);
+                    return;
                 }
-
-                //foreach (var item in _efContext.Login.ToList())
-                //{
-                //    if (txtEmail.Text == item.Email &&  txtPassword.Password == item.Password)
-                //    {
-                //        var role = item.Role.FirstOrDefault(r => r.RoleName == "Admin");
-
-                //        if (role != null)
-                //        {
-                //            _Role = role.RoleName;
-                //        }
-                //        else
-                //        {
-                //            _Role = string.Empty;
-                //        }
-                //        MessageBox.Show("Test");
-                //        break;
-                //    }
-                //}
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
             }
-            
+
         }
 
 
         private void MainForm_Loaded(object sender, RoutedEventArgs e)
         {
             _efContext = new EFContext();
+        }
+
+        private void Label_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            RegistrationForm form = new RegistrationForm();
+            form.ShowDialog();
         }
     }
 }
