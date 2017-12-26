@@ -79,6 +79,7 @@
     <Compile Include="Context\DetailsClass.cs" />
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="Context\Login.cs" />
+    <Compile Include="Context\Register.cs" />
     <Compile Include="Context\Role.cs" />
     <Compile Include="MainMenu.xaml.cs">
       <DependentUpon>MainMenu.xaml</DependentUpon>
@@ -89,17 +90,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712191402463_te.cs" />
-    <Compile Include="Migrations\201712191402463_te.Designer.cs">
-      <DependentUpon>201712191402463_te.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712211346340_nigger.cs" />
-    <Compile Include="Migrations\201712211346340_nigger.Designer.cs">
-      <DependentUpon>201712211346340_nigger.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201712211357502_123.cs" />
-    <Compile Include="Migrations\201712211357502_123.Designer.cs">
-      <DependentUpon>201712211357502_123.cs</DependentUpon>
+    <Compile Include="Migrations\201712261550179_dau.cs" />
+    <Compile Include="Migrations\201712261550179_dau.Designer.cs">
+      <DependentUpon>201712261550179_dau.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -115,14 +108,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712191402463_te.resx">
-      <DependentUpon>201712191402463_te.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712211346340_nigger.resx">
-      <DependentUpon>201712211346340_nigger.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201712211357502_123.resx">
-      <DependentUpon>201712211357502_123.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712261550179_dau.resx">
+      <DependentUpon>201712261550179_dau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

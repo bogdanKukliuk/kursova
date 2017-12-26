@@ -65,6 +65,7 @@ namespace kursov
                 {
                     MessageBox.Show(user.Email);
                 }
+
                 //foreach (var item in _efContext.Login.ToList())
                 //{
                 //    if (txtEmail.Text == item.Email &&  txtPassword.Password == item.Password)
