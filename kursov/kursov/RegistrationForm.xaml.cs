@@ -29,17 +29,27 @@ namespace kursov
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            if (txtPassword.Password != txtPassword_R.Password)
+            try
             {
-                txtPassword.BorderBrush = new SolidColorBrush(Colors.Red);
-                txtPassword_R.BorderBrush = new SolidColorBrush(Colors.Red);
+                if (txtPassword.Password != txtPassword_R.Password)
+                {
+                    txtPassword.BorderBrush = new SolidColorBrush(Colors.Red);
+                    txtPassword_R.BorderBrush = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    var _login = new Login { Email = txtEmail.Text, Password = txtPassword_R.Password };
+                    _context.Login.Add(_login);
+                    _context.SaveChanges();
+                }
             }
-            else
+            catch (Exception exe)
             {
-                var _login = new Login { Email = txtEmail.Text,  Password = txtPassword_R.Password };
-                _context.Login.Add(_login);
-                _context.SaveChangesAsync();
+                MessageBox.Show(exe.Message);
+                Environment.Exit(1);
+                throw;
             }
+            
         }
     }
 }
