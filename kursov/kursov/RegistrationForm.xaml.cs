@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using kursov.Context;
 
 namespace kursov
 {
@@ -19,8 +20,10 @@ namespace kursov
     /// </summary>
     public partial class RegistrationForm : Window
     {
+        private EFContext _context;
         public RegistrationForm()
         {
+            _context = new EFContext();
             InitializeComponent();
         }
 
@@ -31,7 +34,12 @@ namespace kursov
                 txtPassword.BorderBrush = new SolidColorBrush(Colors.Red);
                 txtPassword_R.BorderBrush = new SolidColorBrush(Colors.Red);
             }
-            
+            else
+            {
+                var _login = new Login { Email = txtEmail.Text,  Password = txtPassword_R.Password };
+                _context.Login.Add(_login);
+                _context.SaveChangesAsync();
+            }
         }
     }
 }
