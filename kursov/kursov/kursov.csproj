@@ -61,6 +61,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Migrations\201712271402537_doe.cs" />
+    <Compile Include="Migrations\201712271402537_doe.Designer.cs">
+      <DependentUpon>201712271402537_doe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
       <DependentUpon>RegistrationForm.xaml</DependentUpon>
     </Compile>
@@ -94,11 +99,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201712261550179_dau.cs" />
-    <Compile Include="Migrations\201712261550179_dau.Designer.cs">
-      <DependentUpon>201712261550179_dau.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -112,8 +112,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712261550179_dau.resx">
-      <DependentUpon>201712261550179_dau.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201712271402537_doe.resx">
+      <DependentUpon>201712271402537_doe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
