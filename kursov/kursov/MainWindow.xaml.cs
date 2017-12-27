@@ -41,9 +41,14 @@ namespace kursov
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainMenu mainMenu = new MainMenu();
             if (!backgroundWorker.IsBusy)
+            {
                 backgroundWorker.RunWorkerAsync();
+                Hide();
+                mainMenu.ShowDialog();
+                Close();
+            }
             else
                 backgroundWorker.CancelAsync();
 
