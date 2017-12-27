@@ -20,8 +20,7 @@ namespace kursov.Context
         [Required, MaxLength(length: 228)]
         public string Name { get; set; }
         [Required]
-        public int Money { get; set; } 
-
+        public int Money { get; set; }
         public ICollection<Role> Role { get; set; }
         public ICollection<Register> Register { get; set; }
     }
