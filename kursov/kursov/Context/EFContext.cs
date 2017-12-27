@@ -15,10 +15,6 @@ namespace kursov.Context
         
         public DbSet<Login> Login { get; set; }
         public DbSet<Role> Role { get; set; }
-        public DbSet<BrandCar> Brand { get; set; }
-        public DbSet<DetailsClass> DetalClass { get; set; }
-        public DbSet<Details> Detals { get; set; }
-        public DbSet<Bin> Bin { get; set; }
         public DbSet<Register> Register { get; set; }
     }
 }
