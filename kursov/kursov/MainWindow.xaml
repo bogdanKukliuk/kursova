@@ -15,7 +15,7 @@
             <Label Content="Password" Foreground="White" FontSize="20"/>
             <PasswordBox x:Name="txtPassword" Background="#FF464545" FontSize="20"/>
             <Button x:Name="btnSubmit" Content="Submit" Margin="60,20,60.4,0" Background="BlueViolet" FontSize="25" Click="btnSubmit_Click"/>
-            <Label Content="Forgot Password?" Foreground="Blue" Margin="89,0,85.4,0" PreviewMouseDown="Label_PreviewMouseDown" />
+            <Label Content="Register" Foreground="Blue" Margin="113,0,93.4,0" PreviewMouseDown="Label_PreviewMouseDown" />
 
         </StackPanel>
 

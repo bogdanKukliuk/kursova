@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using kursov.Context;
+using System.Data.Entity;
 
 namespace kursov
 {
@@ -38,9 +39,24 @@ namespace kursov
                 }
                 else
                 {
-                    var _login = new Login { Email = txtEmail.Text, Password = txtPassword_R.Password };
-                    _context.Login.Add(_login);
+                    var user = new Login
+                    {
+                        Email = txtEmail.Text,
+                        Password = txtPassword_R.Password,
+                        Money = 12,
+                        Name = txtName.Text
+                    };
+                    _context.Login.Add(user);
                     _context.SaveChanges();
+
+                    var role = _context.Role.Include(l => l.Login).SingleOrDefault(r => r.RoleName == "User");
+                    
+                    if(role != null)
+                    {
+                        role.Login.Add(user);
+                        _context.SaveChanges();
+                    }
+                    //MessageBox.Show(user.Email + user.Password + user.Money + user.Name + role.RoleName + role.Login.ToString());
                 }
             }
             catch (Exception exe)

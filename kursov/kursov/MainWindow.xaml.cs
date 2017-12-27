@@ -26,9 +26,7 @@ namespace kursov
     {
         private EFContext _efContext;
         private readonly BackgroundWorker backgroundWorker;
-
-        private string role;
-        public string _Role { set { role = value; } }
+        public string _Role { get; set; }
         public MainWindow()
         {
             backgroundWorker = new BackgroundWorker();
@@ -66,6 +64,17 @@ namespace kursov
 
                 if (user != null)
                 {
+                    var roles=user.Role;
+                    
+                    if(roles.SingleOrDefault(r => r.RoleName == "User") != null)
+                    {
+                        _Role = "User" + " ";
+
+                        if (roles.SingleOrDefault(r => r.RoleName == "Admin") != null)
+                        {
+                            _Role += "Admin";
+                        }
+                    }
                     return;
                 }
                 

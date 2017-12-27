@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="RegistrationForm" Height="432.361" Width="364.513" Background="BlueViolet">
+        Title="RegistrationForm" Height="495.361" Width="364.513" Background="BlueViolet">
     <Border Background="Black" CornerRadius="25" Margin="20">
         <StackPanel Margin="20">
             <Label Content="Registration" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
@@ -16,8 +16,10 @@
             <PasswordBox x:Name="txtPassword" Background="#FF464545" FontSize="20" Margin="0,0,0.4,0"/>
             <Label Content="Repeat Password" Foreground="White" FontSize="20" Margin="0,0,0.4,0"/>
             <PasswordBox x:Name="txtPassword_R" Background="#FF464545" FontSize="20" Margin="0,0,0.4,0"/>
+            <Label Content="Name" Foreground="White" FontSize="20" Margin="0,0,0.4,0"/>
+            <TextBox x:Name="txtName" Background="#FF464545" FontSize="20" Margin="0,0,0.4,0"/>
             <Button x:Name="btnRegister" Content="Register" Margin="60,20,60.4,0" Background="BlueViolet" FontSize="25" Click="btnRegister_Click"/>
-            
+
 
         </StackPanel>
 
