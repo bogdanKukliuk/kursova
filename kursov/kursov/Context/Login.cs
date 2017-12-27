@@ -21,6 +21,7 @@ namespace kursov.Context
         public string Name { get; set; }
         [Required]
         public int Money { get; set; } 
+
         public ICollection<Role> Role { get; set; }
         public ICollection<Register> Register { get; set; }
     }
