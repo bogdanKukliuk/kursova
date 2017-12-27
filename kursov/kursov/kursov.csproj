@@ -76,9 +76,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Context\Bin.cs" />
-    <Compile Include="Context\BrandCar.cs" />
-    <Compile Include="Context\Details.cs" />
     <Compile Include="Context\DetailsClass.cs" />
     <Compile Include="Context\EFContext.cs" />
     <Compile Include="Context\Login.cs" />
@@ -132,9 +129,6 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
