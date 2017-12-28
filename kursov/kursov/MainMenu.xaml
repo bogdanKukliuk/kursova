@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Background="BlueViolet" WindowState="Maximized" Loaded="Window_Loaded" MinWidth="1100" MinHeight="450" Width="1100">
+        Title="MainWindow" Background="BlueViolet" Height="700" WindowState="Maximized" Loaded="Window_Loaded" MinWidth="1100" MinHeight="700" Width="1100">
     <Border Background="Black" CornerRadius="25" Margin="20">
         <StackPanel>
             <Grid Height="160">
@@ -25,6 +25,23 @@
                 <Button x:Name="btnSearch" Content="Пошук" Margin="0,67,0,0" Height="26" Grid.Column="3" Grid.Row="1"/>
                 <Button x:Name="btnBin" Content="Корзина" Grid.Column="3" Margin="4,9"/>
                 <Button x:Name="btnLogin" Content="Логін" Grid.Row="0" Grid.Column="2" Margin="0,9,5,9"/>
+            </Grid>
+            <Grid Height="472">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                    <ColumnDefinition Width="158*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="117*"/>
+                    <RowDefinition Height="355*"/>
+                </Grid.RowDefinitions>
+                <Image Source="Reno.jpg"/>
+
             </Grid>
         </StackPanel>
     </Border>
