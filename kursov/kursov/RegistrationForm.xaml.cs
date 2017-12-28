@@ -43,7 +43,7 @@ namespace kursov
                     {
                         Email = txtEmail.Text,
                         Password = txtPassword_R.Password,
-                        Money = 12,
+                        Money = 0,
                         Name = txtName.Text
                     };
                     _context.Login.Add(user);

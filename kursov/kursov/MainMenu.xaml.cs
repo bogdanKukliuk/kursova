@@ -19,9 +19,15 @@ namespace kursov
     /// </summary>
     public partial class MainMenu : Window
     {
+        public string UserName { get; set; }
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.Title = $"You logined as { UserName }";
         }
     }
 }

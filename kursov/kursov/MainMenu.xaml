@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Background="BlueViolet" WindowState="Maximized">
+        Title="MainWindow" Background="BlueViolet" WindowState="Maximized" Loaded="Window_Loaded">
     <Border Background="Black" CornerRadius="25" Margin="20">
         <StackPanel>
             <Grid Height="460">
