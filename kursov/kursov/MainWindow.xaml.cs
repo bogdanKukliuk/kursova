@@ -44,14 +44,17 @@ namespace kursov
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             mainMenu = new MainMenu();
-
+            Hide();
+            this.mainMenu.ShowDialog();
+            Close();
+            /*
             if (!backgroundWorker.IsBusy)
             {
                 //backgroundWorker.RunWorkerAsync();
                 DoConnect(null, null);
             }
             else
-                backgroundWorker.CancelAsync();
+                backgroundWorker.CancelAsync();*/
 
         }
 
