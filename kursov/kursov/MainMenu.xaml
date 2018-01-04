@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
         Title="MainWindow" Height="885" Width="1393" MinHeight="800" MinWidth="1200">
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="130"/>
+            <Setter Property="Width" Value="130"/>
+        </Style>
+    </Window.Resources>
     <Border Background="Black" CornerRadius="25" MinHeight="500" Margin="170,77,171,77" MaxWidth="1200">
         <Grid MinHeight="500" MaxHeight="550" Margin="0,0,6,0">
             <Grid.ColumnDefinitions>
@@ -33,30 +39,15 @@
                             <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxWidth="1100"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
-                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
+                    <Image Source="Reno.jpg"/>
                 </ListBox>
             </Grid>
         </Grid>
