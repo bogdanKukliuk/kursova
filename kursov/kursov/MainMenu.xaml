@@ -5,45 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Background="BlueViolet" Height="700" WindowState="Maximized" Loaded="Window_Loaded" MinWidth="1100" MinHeight="700" Width="1100">
-    <Border Background="Black" CornerRadius="25" Margin="20">
-        <StackPanel>
-            <Grid Height="160">
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="272*"/>
-                    <ColumnDefinition Width="535*"/>
-                    <ColumnDefinition Width="124*"/>
-                    <ColumnDefinition Width="121*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="42*"/>
-                    <RowDefinition Height="100*"/>
-                </Grid.RowDefinitions>
-                <ComboBox x:Name="comBoxFlash" Grid.Row="1" Margin="0,73,0,10"/>
-                <Label Content="Швидкій вибір" Foreground="White" Grid.Row="1" Margin="0,37,0,45" FontSize="16"/>
-                <Button x:Name="btnSearch" Content="Пошук" Margin="0,67,0,0" Height="26" Grid.Column="3" Grid.Row="1"/>
-                <Button x:Name="btnBin" Content="Корзина" Grid.Column="3" Margin="4,9"/>
-                <Button x:Name="btnLogin" Content="Логін" Grid.Row="0" Grid.Column="2" Margin="0,9,5,9"/>
+        Title="MainWindow" Height="885" Width="1393" MinWidth="1200">
+    <Border Background="Black" CornerRadius="25" Height="700" Margin="170,77,171,77" MaxWidth="1200">
+        <Grid MaxHeight="550" Margin="0,0,6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="233*"/>
+                <ColumnDefinition Width="437*"/>
+                <ColumnDefinition Width="111*"/>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="12*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="28"/>
+                <RowDefinition MaxHeight="15" Height="44*"/>
+                <RowDefinition MaxHeight="28" Height="29*"/>
+                <RowDefinition MaxHeight="4" Height="5*"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="comBoxFlash" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,2,356,-25"/>
+            <Label Content="Швидкій вибір" Foreground="White" Grid.Row="2" Margin="0,2,356,2" FontSize="16" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Button x:Name="btnSearch" Content="Пошук" Grid.Column="2" Grid.Row="2" Margin="0,2,0,1"/>
+            <Button x:Name="btnBin" Content="Корзина" Grid.Column="3" Margin="1,3,0,0"/>
+            <Button x:Name="btnLogin" Content="Логін" Grid.Row="0" Grid.Column="2" Margin="4,3,4,0"/>
+            <Grid MaxHeight="500" MinWidth="800" Margin="0,30,0,-305" Grid.Row="3" Grid.ColumnSpan="5">
+                <ListBox MinWidth="800" MaxWidth="1100" Margin="0,10,0,-206">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxWidth="1100"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                    <Image Source="Reno.jpg" Height="130" Width="130"/>
+                </ListBox>
             </Grid>
-            <Grid Height="472">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                    <ColumnDefinition Width="158*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="117*"/>
-                    <RowDefinition Height="355*"/>
-                </Grid.RowDefinitions>
-                <Image Source="Reno.jpg"/>
-
-            </Grid>
-        </StackPanel>
+        </Grid>
     </Border>
 
 
