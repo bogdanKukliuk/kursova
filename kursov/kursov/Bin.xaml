@@ -1,0 +1,19 @@
+﻿<Window x:Class="kursov.Bin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursov"
+        mc:Ignorable="d"
+        Title="Bin"  MinHeight="500" MinWidth="1000" MaxWidth="1500" Width="904.193">
+    <DataGrid HorizontalAlignment="Left" Height="504" MaxWidth="1500" VerticalAlignment="Top" Width="984">
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="ID" Width="40"/>
+            <DataGridTextColumn Header="Name" Width="250"/>
+            <DataGridTextColumn Header="Brand" Width="250"/>
+            <DataGridTextColumn Header="Detal" Width="*"/>
+        </DataGrid.Columns>
+
+    </DataGrid>
+
+</Window>

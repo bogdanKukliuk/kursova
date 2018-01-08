@@ -29,5 +29,51 @@ namespace kursov
         {
             this.Title = $"You logined as { UserName }";
         }
+
+        private void btnBin_Click(object sender, RoutedEventArgs e)
+        {
+            Bin bin = new Bin();
+            bin.ShowDialog();
+            Close();
+        }
+        /*
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            if(Detal.Visibility == Visibility.Hidden)
+            {
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
+                
+            }
+            btnSearch.IsEnabled = false;
+        }
+        */
+        private void Reno_Click(object sender, RoutedEventArgs e)
+        {
+            if (Detal.Visibility == Visibility.Hidden)
+            {
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
+            }
+
+            btnSearch.IsEnabled = false;
+        }
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            if (Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
+                Carr.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Bmw_Click(object sender, RoutedEventArgs e)
+        {
+            if (Detal.Visibility == Visibility.Hidden)
+            {
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
+            }
+        }
     }
 }

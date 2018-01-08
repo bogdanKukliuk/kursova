@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Bin.xaml.cs">
+      <DependentUpon>Bin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201712271402537_doe.cs" />
     <Compile Include="Migrations\201712271402537_doe.Designer.cs">
       <DependentUpon>201712271402537_doe.cs</DependentUpon>
@@ -69,6 +72,10 @@
     <Compile Include="RegistrationForm.xaml.cs">
       <DependentUpon>RegistrationForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="Bin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,6 +139,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Reno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Двигун.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Home-Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="lada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BMW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Jaguar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
