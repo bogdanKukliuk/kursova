@@ -140,22 +140,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Reno.jpg" />
+    <Resource Include="Imagess\Reno.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Двигун.jpg" />
+    <Resource Include="Imagess\Двигун.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Home-Button.png" />
+    <Resource Include="Imagess\Home-Button.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="lada.jpg" />
+    <Resource Include="Imagess\lada.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="BMW.jpg" />
+    <Resource Include="Imagess\BMW.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Jaguar.jpg" />
+    <Resource Include="Imagess\Jaguar.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

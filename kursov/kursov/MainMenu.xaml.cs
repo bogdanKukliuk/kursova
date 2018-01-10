@@ -84,5 +84,14 @@ namespace kursov
                 Carr.Visibility = Visibility.Hidden;
             }
         }
+
+        private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
+                Carr.Visibility = Visibility.Visible;
+            }
+        }
     }
 }
