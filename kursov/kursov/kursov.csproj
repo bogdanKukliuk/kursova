@@ -64,9 +64,11 @@
     <Compile Include="Bin.xaml.cs">
       <DependentUpon>Bin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201712271402537_doe.cs" />
-    <Compile Include="Migrations\201712271402537_doe.Designer.cs">
-      <DependentUpon>201712271402537_doe.cs</DependentUpon>
+    <Compile Include="Context\BrendCar.cs" />
+    <Compile Include="Context\ClassDetal.cs" />
+    <Compile Include="Migrations\201801101237478_der.cs" />
+    <Compile Include="Migrations\201801101237478_der.Designer.cs">
+      <DependentUpon>201801101237478_der.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
@@ -119,8 +121,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712271402537_doe.resx">
-      <DependentUpon>201712271402537_doe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801101237478_der.resx">
+      <DependentUpon>201801101237478_der.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

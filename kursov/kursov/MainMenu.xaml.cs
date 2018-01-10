@@ -48,28 +48,37 @@ namespace kursov
             btnSearch.IsEnabled = false;
         }
         */
-        private void Reno_Click(object sender, RoutedEventArgs e)
+
+        private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Detal.Visibility == Visibility.Hidden)
+            if (this.Detal.Visibility == Visibility.Hidden)
             {
                 Detal.Visibility = Visibility.Visible;
                 Carr.Visibility = Visibility.Hidden;
             }
-
-            btnSearch.IsEnabled = false;
         }
-        private void btnHome_Click(object sender, RoutedEventArgs e)
+
+        private void Reno_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Detal.Visibility == Visibility.Visible)
+            if (this.Detal.Visibility == Visibility.Hidden)
             {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
             }
         }
 
-        private void Bmw_Click(object sender, RoutedEventArgs e)
+        private void Bmw_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (Detal.Visibility == Visibility.Hidden)
+            if (this.Detal.Visibility == Visibility.Hidden)
+            {
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void Lada_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Detal.Visibility == Visibility.Hidden)
             {
                 Detal.Visibility = Visibility.Visible;
                 Carr.Visibility = Visibility.Hidden;

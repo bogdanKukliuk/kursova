@@ -28,5 +28,10 @@ namespace kursov
         {
             MessageBox.Show("Dorou");
         }
+
+        private void Lox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="885" Width="1393" MinHeight="800" MinWidth="1200">
+        Title="MainWindow" Height="885" WindowStartupLocation="CenterScreen" Width="1393" MinHeight="800" MinWidth="1200" >
     <Window.Resources>
         <Style TargetType="Image">
             <Setter Property="Height" Value="170"/>
@@ -43,20 +43,10 @@
                         </ItemsPanelTemplate>
 
                     </ListBox.ItemsPanel>
-
-                    <Button x:Name="Reno" Click="Reno_Click">
-                        <Image Source="Reno.jpg"/>
-                    </Button>
-                    <Button x:Name="Sex">
-                        <Image Source="Jaguar.jpg"/>
-                    </Button>
-                    <Button  x:Name="Bmw" Click="Bmw_Click">
-                        <Image Source="BMW.jpg"/>
-                    </Button>
-                    <Button x:Name="Lada">
-                        <Image Source="Lada.jpg"/>
-                    </Button>
-
+                    <Image x:Name="Reno" Source="Reno.jpg" MouseDown="Reno_MouseDown"/>
+                    <Image x:Name="Sex" Source="Jaguar.jpg" MouseDown="Sex_MouseDown"/>
+                    <Image x:Name="Bmw" Source="BMW.jpg" MouseDown="Bmw_MouseDown"/>
+                    <Image x:Name="Lada" Source="Lada.jpg" MouseDown="Lada_MouseDown"/>
                 </ListBox>
                 <ListBox x:Name="Detal" Visibility="Hidden" MinWidth="800" MinHeight="500" MaxWidth="1100" Margin="0,10">
                     <ListBox.ItemsPanel>
@@ -74,10 +64,7 @@
                     <Image Source="Двигун.jpg"/>
                 </ListBox>
             </Grid>
-
-            <Button x:Name="btnHome" HorizontalAlignment="Left" Margin="10,-62,0,0" VerticalAlignment="Top" Grid.Row="0" Grid.Column="0" Width="66" Height="54" Click="btnHome_Click">
-                <Image Source="Home-Button.png" Height="54" Width="66"/>
-            </Button>
+            <Image x:Name="btnHome" Source="Home-Button.png" Height="54" Width="66" Margin="3,-66,10,0" VerticalAlignment="Top"/>
         </Grid>
     </Border>
 

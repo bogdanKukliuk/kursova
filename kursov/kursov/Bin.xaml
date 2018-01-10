@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
         Title="Bin"  MinHeight="500" MinWidth="1000" MaxWidth="1500" Width="904.193">
-    <DataGrid HorizontalAlignment="Left" Height="504" MaxWidth="1500" VerticalAlignment="Top" Width="984">
+    <DataGrid x:Name="Lox" HorizontalAlignment="Left" Height="504" MaxWidth="1500" VerticalAlignment="Top" Width="984" SelectionChanged="Lox_SelectionChanged">
         <DataGrid.Columns>
             <DataGridTextColumn Header="ID" Width="40"/>
             <DataGridTextColumn Header="Name" Width="250"/>
