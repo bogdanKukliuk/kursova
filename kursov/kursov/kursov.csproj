@@ -157,5 +157,15 @@
   <ItemGroup>
     <Resource Include="Imagess\Jaguar.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\volkswagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\subaru.jpg" />
+    <Resource Include="Imagess\bentley.jpg" />
+    <Resource Include="Imagess\nisan.jpg" />
+    <Resource Include="Imagess\toyota.jpg" />
+    <Resource Include="Imagess\DOGE.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

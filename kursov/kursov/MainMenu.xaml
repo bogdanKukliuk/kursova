@@ -47,6 +47,9 @@
                     <Image x:Name="Sex" Source="Imagess\Jaguar.jpg" MouseDown="Sex_MouseDown"/>
                     <Image x:Name="Bmw" Source="Imagess\BMW.jpg" MouseDown="Bmw_MouseDown"/>
                     <Image x:Name="Lada" Source="Imagess\Lada.jpg" MouseDown="Lada_MouseDown"/>
+                    <Image x:Name="Toyota" Source="Imagess\toyota.jpg" MouseDown="Toyota_MouseDown"/>
+                    <Image x:Name="DOGE" Source="Imagess\DOGE.png" MouseDown="DOGE_MouseDown"/>
+                    <Image x:Name="Subaru" Source="Imagess\subaru.jpg" MouseDown="Subaru_MouseDown"/>
                 </ListBox>
                 <ListBox x:Name="Detal" Visibility="Hidden" MinWidth="800" MinHeight="500" MaxWidth="1100" Margin="0,10">
                     <ListBox.ItemsPanel>
