@@ -19,6 +19,7 @@ namespace kursov
     /// </summary>
     public partial class MainMenu : Window
     {
+        private int gamno;
         public string UserName { get; set; }
         public MainMenu()
         {
@@ -93,5 +94,34 @@ namespace kursov
                 Carr.Visibility = Visibility.Visible;
             }
         }
+
+        private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
+                Carr.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
+                Carr.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
+                Carr.Visibility = Visibility.Visible;
+            }
+        }
+
+        
     }
 }
