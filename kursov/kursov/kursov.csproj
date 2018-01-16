@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -67,6 +68,7 @@
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Context\BrendCar.cs" />
     <Compile Include="Context\Detal.cs" />
+    <Compile Include="Converter.cs" />
     <Compile Include="Migrations\201801151536250_qwe.cs" />
     <Compile Include="Migrations\201801151536250_qwe.Designer.cs">
       <DependentUpon>201801151536250_qwe.cs</DependentUpon>

@@ -57,7 +57,7 @@
                             <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxWidth="1100"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
-                    
+
                     <Image Source="Imagess\Двигун.jpg"/>
                     <Image Source="Imagess\Двигун.jpg"/>
                     <Image Source="Imagess\Двигун.jpg"/>

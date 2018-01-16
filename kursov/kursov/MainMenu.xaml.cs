@@ -1,6 +1,7 @@
 ﻿using kursov.Context;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace kursov
         private List<DetailsClass> _brendName;
         public MainMenu()
         {
-            InitializeBrend();
+            //InitializeBrend();
             InitializeComponent();
         }
 
@@ -41,7 +42,7 @@ namespace kursov
             bin.ShowDialog();
             Close();
         }
-        
+
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 3;
@@ -66,7 +67,7 @@ namespace kursov
             ShowDetal();
         }
 
-        
+
 
         private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -108,7 +109,9 @@ namespace kursov
         private void InitializeBrend()
         {
             ConnectionClass connectionObj = new ConnectionClass();
-            _brendName = connectionObj.DoConnect();
+            _brendName = connectionObj.DoReadClassDetal();
         }
+
+        
     }
 }

@@ -115,5 +115,6 @@ namespace kursov
             registrationForm = new RegistrationForm();
             registrationForm.ShowDialog();
         }
+        
     }
 }
