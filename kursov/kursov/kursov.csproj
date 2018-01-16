@@ -67,9 +67,9 @@
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Context\BrendCar.cs" />
     <Compile Include="Context\Detal.cs" />
-    <Compile Include="Migrations\201801151536250_qwe.cs" />
-    <Compile Include="Migrations\201801151536250_qwe.Designer.cs">
-      <DependentUpon>201801151536250_qwe.cs</DependentUpon>
+    <Compile Include="Migrations\201801161925579_sqe.cs" />
+    <Compile Include="Migrations\201801161925579_sqe.Designer.cs">
+      <DependentUpon>201801161925579_sqe.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
@@ -122,8 +122,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201801151536250_qwe.resx">
-      <DependentUpon>201801151536250_qwe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801161925579_sqe.resx">
+      <DependentUpon>201801161925579_sqe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
