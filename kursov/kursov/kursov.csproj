@@ -64,6 +64,7 @@
     <Compile Include="Bin.xaml.cs">
       <DependentUpon>Bin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ConnectionClass.cs" />
     <Compile Include="Context\BrendCar.cs" />
     <Compile Include="Context\Detal.cs" />
     <Compile Include="Migrations\201801151536250_qwe.cs" />

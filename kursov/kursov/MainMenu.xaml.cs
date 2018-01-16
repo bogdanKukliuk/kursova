@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kursov.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,13 @@ namespace kursov
     /// </summary>
     public partial class MainMenu : Window
     {
-        private int gamno;
+        private int indificator;
         public string UserName { get; set; }
+        private string BrendName { get; set; }
+        private List<DetailsClass> _brendName;
         public MainMenu()
         {
+            InitializeBrend();
             InitializeComponent();
         }
 
@@ -37,53 +41,49 @@ namespace kursov
             bin.ShowDialog();
             Close();
         }
-        /*
-        private void btnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            if(Detal.Visibility == Visibility.Hidden)
-            {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
-                
-            }
-            btnSearch.IsEnabled = false;
-        }
-        */
-
+        
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
-            {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
-            }
+            indificator = 3;
+            ShowDetal();
         }
 
         private void Reno_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
-            {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
-            }
+            indificator = 6;
+            ShowDetal();
         }
 
         private void Bmw_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
-            {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
-            }
+            indificator = 2;
+            ShowDetal();
         }
 
         private void Lada_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
-            {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
-            }
+            indificator = 1;
+            ShowDetal();
+        }
+
+        
+
+        private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            indificator = 9;
+            ShowDetal();
+        }
+
+        private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            indificator = 4;
+            ShowDetal();
+        }
+
+        private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            indificator = 7;
+            ShowDetal();
         }
 
         private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
@@ -92,36 +92,23 @@ namespace kursov
             {
                 Detal.Visibility = Visibility.Hidden;
                 Carr.Visibility = Visibility.Visible;
+                indificator = 0;
             }
         }
 
-        private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
+        private void ShowDetal()
         {
-            if (this.Detal.Visibility == Visibility.Visible)
+            if (this.Detal.Visibility == Visibility.Hidden)
             {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
+                Detal.Visibility = Visibility.Visible;
+                Carr.Visibility = Visibility.Hidden;
             }
         }
 
-        private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
+        private void InitializeBrend()
         {
-            if (this.Detal.Visibility == Visibility.Visible)
-            {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
-            }
+            ConnectionClass connectionObj = new ConnectionClass();
+            _brendName = connectionObj.DoConnect();
         }
-
-        private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (this.Detal.Visibility == Visibility.Visible)
-            {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
-            }
-        }
-
-        
     }
 }
