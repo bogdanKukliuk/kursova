@@ -13,6 +13,8 @@ namespace kursov.Context
         public int ID { get; set; }
         [Required,MaxLength(length:200)]
         public string NameDetalClass { get; set; }
+        [Required]
+        public byte[] Picture { get; set; }
         public BrendCar BrendCar { get; set; }
     }
 }

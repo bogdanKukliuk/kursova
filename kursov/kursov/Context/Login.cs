@@ -12,6 +12,7 @@ namespace kursov.Context
     public class Login
     {
         public Login() { }
+        [Key]
         public int ID { get; set; }
         [Required, MaxLength(length: 228)]
         public string Email { get; set; }

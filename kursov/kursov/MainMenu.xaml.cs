@@ -21,14 +21,15 @@ namespace kursov
     /// </summary>
     public partial class MainMenu : Window
     {
-        private int indificator;
         public string UserName { get; set; }
         private string BrendName { get; set; }
-        private List<DetailsClass> _brendName;
+        private List<DetailsClass> _detalClassObj;
+        private ConnectionClass connectionObj;
         public MainMenu()
         {
             //InitializeBrend();
             InitializeComponent();
+             FillBase();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -45,25 +46,21 @@ namespace kursov
 
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 3;
             ShowDetal();
         }
 
         private void Reno_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 6;
             ShowDetal();
         }
 
         private void Bmw_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 2;
             ShowDetal();
         }
 
         private void Lada_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 1;
             ShowDetal();
         }
 
@@ -71,19 +68,16 @@ namespace kursov
 
         private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 9;
             ShowDetal();
         }
 
         private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 4;
             ShowDetal();
         }
 
         private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            indificator = 7;
             ShowDetal();
         }
 
@@ -93,7 +87,6 @@ namespace kursov
             {
                 Detal.Visibility = Visibility.Hidden;
                 Carr.Visibility = Visibility.Visible;
-                indificator = 0;
             }
         }
 
@@ -108,10 +101,21 @@ namespace kursov
 
         private void InitializeBrend()
         {
-            ConnectionClass connectionObj = new ConnectionClass();
-            _brendName = connectionObj.DoReadClassDetal();
+            connectionObj = new ConnectionClass();
+            _detalClassObj = connectionObj.DoReadClassDetal();
         }
 
+        private void FillBase()
+        {
+            DetailsClass detailsClass = new DetailsClass();
+            detailsClass.NameDetalClass = "rasdasd";
+
+            _detalClassObj = new List<DetailsClass>();
+            _detalClassObj.Add(detailsClass);
+
+            connectionObj = new ConnectionClass();
+            connectionObj.DoWriteDetalClass(_detalClassObj);
+        }
         
     }
 }

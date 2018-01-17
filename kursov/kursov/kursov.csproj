@@ -69,6 +69,10 @@
     <Compile Include="Context\BrendCar.cs" />
     <Compile Include="Context\Detal.cs" />
     <Compile Include="Converter.cs" />
+    <Compile Include="Migrations\201801171539444_123.cs" />
+    <Compile Include="Migrations\201801171539444_123.Designer.cs">
+      <DependentUpon>201801171539444_123.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
       <DependentUpon>RegistrationForm.xaml</DependentUpon>
@@ -120,6 +124,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201801171539444_123.resx">
+      <DependentUpon>201801171539444_123.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -139,10 +146,10 @@
     <Resource Include="Imagess\Reno.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagess\Двигун.jpg" />
+    <Resource Include="ImagesOfLOL%29%29\Двигун.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Imagess\Home-Button.png" />
+    <Resource Include="ImagesOfLOL%29%29\Home-Button.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagess\lada.jpg" />
