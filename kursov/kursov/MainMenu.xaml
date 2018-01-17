@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="885" WindowStartupLocation="CenterScreen" Width="1393" MinHeight="800" MinWidth="1200" >
+        Title="MainWindow" Height="734.5" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="BlueViolet" Width="1393" MinHeight="700" MinWidth="1200" >
     <Window.Resources>
         <Style TargetType="Image">
             <Setter Property="Height" Value="170"/>
             <Setter Property="Width" Value="180"/>
         </Style>
     </Window.Resources>
-    <Border Visibility="Visible" Background="Black" CornerRadius="25" MinHeight="500" Margin="170,77,171,77" MaxWidth="1200">
-        <Grid MinHeight="500" MaxHeight="550" Margin="0,0,6,0">
+    <Border Visibility="Visible" Background="Black" CornerRadius="25" MaxHeight="600" Margin="170,77,171,77" MaxWidth="1200">
+        <Grid Margin="0,0,6,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="79*"/>
                 <ColumnDefinition Width="190*"/>
@@ -23,23 +23,24 @@
                 <ColumnDefinition Width="14*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition MaxHeight="28" Height="0"/>
-                <RowDefinition Height="1"/>
+                <RowDefinition MaxHeight="28" Height="8"/>
+                <RowDefinition Height="68"/>
                 <RowDefinition Height="29"/>
-                <RowDefinition MaxHeight="15" Height="16*"/>
+                <RowDefinition MaxHeight="15" Height="18*"/>
                 <RowDefinition MaxHeight="28" Height="29*"/>
                 <RowDefinition MaxHeight="4" Height="5*"/>
             </Grid.RowDefinitions>
+            <Image x:Name="btnHome" Source="Imagess\Home-Button.png" Height="54" Width="Auto" MouseDown="btnHome_MouseDown" Margin="3,6,10,0" VerticalAlignment="Top" Grid.Row="1"/>
             <ComboBox x:Name="comBoxFlash" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,2,356,-25"/>
             <Label Content="Швидкій вибір" Foreground="White" Grid.Row="4" Margin="0,2,356,2" FontSize="16" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
             <Button x:Name="btnSearch" IsEnabled="True" Content="Пошук" Grid.Column="3" Grid.Row="4" Margin="0,2,0,1"/>
             <Button x:Name="btnBin" Content="Корзина" Grid.Column="4" Margin="1,2,0,0" Click="btnBin_Click" Grid.Row="2"/>
-            <Button x:Name="btnLogin" Content="Логін" Grid.Row="2" Grid.Column="3" Margin="4,2,4,0"/>
-            <Grid MinHeight="500" MinWidth="800" Margin="0,30,0,-546" Grid.Row="5" Grid.ColumnSpan="6">
-                <ListBox x:Name="Carr" Visibility="Hidden" MinWidth="800" MinHeight="500" MaxWidth="1100" Margin="0,10">
+            <Button x:Name="btnLogin" Content="Логін"  Grid.Row="2" Grid.Column="3" Margin="4,2,4,0"/>
+            <Grid MinWidth="800" Margin="0,30,0,-382" Grid.Row="5" Grid.ColumnSpan="6" >
+                <ListBox x:Name="BrandCar" MouseDoubleClick="ClickPhotoBrandCar" Visibility="Visible" MinWidth="800" MaxWidth="1100"  Margin="0,10,-6,0" >
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxWidth="1100"/>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxHeight="400" MaxWidth="1000"/>
                         </ItemsPanelTemplate>
 
                     </ListBox.ItemsPanel>
@@ -51,10 +52,10 @@
                     <Image x:Name="DOGE" Source="Imagess\DOGE.png" MouseDown="DOGE_MouseDown"/>
                     <Image x:Name="Subaru" Source="Imagess\subaru.jpg" MouseDown="Subaru_MouseDown"/>
                 </ListBox>
-                <ListBox x:Name="Detal" Visibility="Visible" MinWidth="800" MinHeight="500" MaxWidth="1100" Margin="0,10">
+                <ListBox x:Name="ClassDetal" Visibility="Hidden" MouseDoubleClick="ClickPhotoClassDetal" MinWidth="800" MaxWidth="1100" Margin="0,10,-6,0">
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxWidth="1100"/>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxHeight="350" MaxWidth="1100"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
 
@@ -82,7 +83,7 @@
                     <Image Source="Imagess\Двигун.jpg"/>
                 </ListBox>
             </Grid>
-            <Image x:Name="btnHome" Source="Imagess\Home-Button.png" Height="54" Width="66" MouseDown="btnHome_MouseDown" Margin="3,-66,10,0" VerticalAlignment="Top"/>
+
         </Grid>
     </Border>
 

@@ -12,7 +12,7 @@ namespace kursov.Context
     {
         public EFContext() : base("connect")
         { }
-        public DbSet<Login> Login { get; set; }
+        public DbSet<User> User { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Register> Register { get; set; }
         public DbSet<BrendCar> BrendCar { get; set; }

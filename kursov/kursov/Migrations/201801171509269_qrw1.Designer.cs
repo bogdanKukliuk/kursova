@@ -7,13 +7,13 @@ namespace kursov.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class sqe : IMigrationMetadata
+    public sealed partial class qrw1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(sqe));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(qrw1));
         
         string IMigrationMetadata.Id
         {
-            get { return "201801161925579_sqe"; }
+            get { return "201801171509269_qrw1"; }
         }
         
         string IMigrationMetadata.Source

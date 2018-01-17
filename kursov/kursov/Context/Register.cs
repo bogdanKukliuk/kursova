@@ -18,6 +18,6 @@ namespace kursov.Context
         public string Password { get; set; }
         [Required, MaxLength(length: 200)]
         public string Name { get; set; }
-        public ICollection <Login> Logi { get; set; }
+        public ICollection <User> User { get; set; }
     }
 }

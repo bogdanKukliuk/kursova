@@ -14,6 +14,6 @@ namespace kursov.Context
         public int ID { get; set; }
         [Required, MaxLength(length: 20)]
         public string RoleName { get; set; }
-        public ICollection<Login> Login { get; set; }
+        public ICollection<User> User { get; set; }
     }
 }

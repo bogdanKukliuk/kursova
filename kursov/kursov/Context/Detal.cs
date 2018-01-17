@@ -13,6 +13,9 @@ namespace kursov.Context
         public int ID { get; set; }
         [Required,MaxLength(length:200)]
         public string NameDetal { get; set; }
+        [Required]
+        public float Price { get; set; }
+        public User User { get; set; }
         public DetailsClass DetailsClass { get; set; }
     }
 }

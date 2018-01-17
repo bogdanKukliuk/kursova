@@ -89,20 +89,20 @@ namespace kursov
 
         private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Visible)
+            if (this.ClassDetal.Visibility == Visibility.Visible)
             {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
+                ClassDetal.Visibility = Visibility.Hidden;
+                BrandCar.Visibility = Visibility.Visible;
                 indificator = 0;
             }
         }
 
         private void ShowDetal()
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
+            if (this.ClassDetal.Visibility == Visibility.Hidden)
             {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
+                ClassDetal.Visibility = Visibility.Visible;
+                BrandCar.Visibility = Visibility.Hidden;
             }
         }
 
@@ -111,7 +111,10 @@ namespace kursov
             ConnectionClass connectionObj = new ConnectionClass();
             _brendName = connectionObj.DoReadClassDetal();
         }
+        private void ClickPhotoBrandCar(object sender, RoutedEventArgs e)
+        {
 
-        
+        }
+
     }
 }
