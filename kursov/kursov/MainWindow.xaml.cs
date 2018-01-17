@@ -71,7 +71,7 @@ namespace kursov
                     return txtPassword.Password;
                 }));
 
-                var user = _efContext.Login.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
+                var user = _efContext.User.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
                   u.Email == email);
 
                 if (user != null)

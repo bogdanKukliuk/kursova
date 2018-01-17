@@ -21,15 +21,14 @@ namespace kursov
     /// </summary>
     public partial class MainMenu : Window
     {
+        private int indificator;
         public string UserName { get; set; }
         private string BrendName { get; set; }
-        private List<DetailsClass> _detalClassObj;
-        private ConnectionClass connectionObj;
+        private List<DetailsClass> _brendName;
         public MainMenu()
         {
             //InitializeBrend();
             InitializeComponent();
-             FillBase();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -46,21 +45,25 @@ namespace kursov
 
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 3;
             ShowDetal();
         }
 
         private void Reno_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 6;
             ShowDetal();
         }
 
         private void Bmw_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 2;
             ShowDetal();
         }
 
         private void Lada_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 1;
             ShowDetal();
         }
 
@@ -68,54 +71,50 @@ namespace kursov
 
         private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 9;
             ShowDetal();
         }
 
         private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 4;
             ShowDetal();
         }
 
         private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            indificator = 7;
             ShowDetal();
         }
 
         private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.Detal.Visibility == Visibility.Visible)
+            if (this.ClassDetal.Visibility == Visibility.Visible)
             {
-                Detal.Visibility = Visibility.Hidden;
-                Carr.Visibility = Visibility.Visible;
+                ClassDetal.Visibility = Visibility.Hidden;
+                BrandCar.Visibility = Visibility.Visible;
+                indificator = 0;
             }
         }
 
         private void ShowDetal()
         {
-            if (this.Detal.Visibility == Visibility.Hidden)
+            if (this.ClassDetal.Visibility == Visibility.Hidden)
             {
-                Detal.Visibility = Visibility.Visible;
-                Carr.Visibility = Visibility.Hidden;
+                ClassDetal.Visibility = Visibility.Visible;
+                BrandCar.Visibility = Visibility.Hidden;
             }
         }
 
         private void InitializeBrend()
         {
-            connectionObj = new ConnectionClass();
-            _detalClassObj = connectionObj.DoReadClassDetal();
+            ConnectionClass connectionObj = new ConnectionClass();
+            _brendName = connectionObj.DoReadClassDetal();
         }
-
-        private void FillBase()
+        private void ClickPhotoBrandCar(object sender, RoutedEventArgs e)
         {
-            DetailsClass detailsClass = new DetailsClass();
-            detailsClass.NameDetalClass = "rasdasd";
 
-            _detalClassObj = new List<DetailsClass>();
-            _detalClassObj.Add(detailsClass);
-
-            connectionObj = new ConnectionClass();
-            connectionObj.DoWriteDetalClass(_detalClassObj);
         }
-        
+
     }
 }
