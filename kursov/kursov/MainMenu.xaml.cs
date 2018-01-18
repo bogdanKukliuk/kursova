@@ -111,10 +111,5 @@ namespace kursov
             ConnectionClass connectionObj = new ConnectionClass();
             _brendName = connectionObj.DoReadClassDetal();
         }
-        private void ClickPhotoBrandCar(object sender, RoutedEventArgs e)
-        {
-
-        }
-
     }
 }

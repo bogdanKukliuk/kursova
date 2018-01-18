@@ -68,6 +68,7 @@
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="Context\BrendCar.cs" />
     <Compile Include="Context\Detal.cs" />
+    <Compile Include="Context\User.cs" />
     <Compile Include="Converter.cs" />
     <Compile Include="Migrations\201801171539444_123.cs" />
     <Compile Include="Migrations\201801171539444_123.Designer.cs">
@@ -95,7 +96,6 @@
     </Compile>
     <Compile Include="Context\DetailsClass.cs" />
     <Compile Include="Context\EFContext.cs" />
-    <Compile Include="Context\Login.cs" />
     <Compile Include="Context\Register.cs" />
     <Compile Include="Context\Role.cs" />
     <Compile Include="MainMenu.xaml.cs">
@@ -146,10 +146,10 @@
     <Resource Include="Imagess\Reno.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ImagesOfLOL%29%29\Двигун.jpg" />
+    <Resource Include="ImagesClassDetails\Двигун.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ImagesOfLOL%29%29\Home-Button.png" />
+    <Resource Include="Home-Button.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagess\lada.jpg" />
