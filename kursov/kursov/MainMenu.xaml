@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
         Title="MainWindow" Height="734.5" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="BlueViolet" Width="1393" MinHeight="700" MinWidth="1200" >
     <Window.Resources>
         <Style TargetType="Image">
