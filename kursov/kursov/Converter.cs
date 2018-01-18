@@ -11,7 +11,7 @@ namespace kursov
 {
     public class Converter
     {
-        public byte[] MapInByte(Image img)
+        public byte[] InByte(Image img)
         {
             var binFormatter = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
@@ -19,5 +19,14 @@ namespace kursov
             binFormatter.Serialize(ms, img);
             return ms.ToArray();
         }
+
+        public Image InImage(byte)
+        {
+            var binFormatter = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+
+            binFormatter.Deserialize(ms, );
+        }
+
     }
 }

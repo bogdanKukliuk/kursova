@@ -34,23 +34,16 @@ namespace kursov
         public void DoWriteDetalClass(List<DetailsClass> detailInfo)
         {
             convert = new Converter();
-
-            //string supportedExtensions = "*.jpg,*.png";
-
-            //int i = 0;
-
-            //foreach (string imageFile in Directory.GetFiles(Environment.CurrentDirectory + @"\\Imagess", "*.*", SearchOption.AllDirectories).Where(s => supportedExtensions.Contains(Path.GetExtension(s).ToLower())))
-            //{
-            //   detailInfo[i++].Picture = convert.MapInByte((Image.FromFile(imageFile)));
-            //}
-
-            //var files = Directory.GetFiles(Environment.CurrentDirectory + "\\Imagess", "*.mp3", SearchOption.AllDirectories).Union(Directory.GetFiles(Environment.CurrentDirectory + "\\Imagess", "*.jpg", SearchOption.AllDirectories));
-
+            
             string dir = Environment.CurrentDirectory + "\\Imagess\\";
             string[] filePaths = Directory.GetFiles(dir, "*.jpg", SearchOption.AllDirectories);
 
             foreach (var item in detailInfo)
             {
+                Image img =  Image.FromFile(filePaths[0]);
+                item.Picture = convert.InByte(img);
+                item.BrendCarId = 1;
+                
                 context.DetailsClass.Add(item);
             }
             context.SaveChanges();
