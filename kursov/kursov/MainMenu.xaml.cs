@@ -38,9 +38,10 @@ namespace kursov
 
         private void btnBin_Click(object sender, RoutedEventArgs e)
         {
+            /*
             Bin bin = new Bin();
             bin.ShowDialog();
-            Close();
+            Close();*/
         }
 
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)

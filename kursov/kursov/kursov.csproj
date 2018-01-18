@@ -170,5 +170,29 @@
     <Resource Include="Imagess\toyota.jpg" />
     <Resource Include="Imagess\DOGE.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\електроніка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\кузов.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\масло.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\коробка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\шина.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\тормоза.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\подвеска.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\avto.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
