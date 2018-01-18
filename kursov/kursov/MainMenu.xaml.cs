@@ -29,6 +29,7 @@ namespace kursov
         {
             //InitializeBrend();
             InitializeComponent();
+            //Lul();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -111,6 +112,16 @@ namespace kursov
         {
             ConnectionClass connectionObj = new ConnectionClass();
             _brendName = connectionObj.DoReadClassDetal();
+        }
+        private void Lul()
+        {
+            ConnectionClass connectionClass = new ConnectionClass();
+            DetailsClass details = new DetailsClass();
+            details.NameDetalClass = "rofl";
+            _brendName = new List<DetailsClass>();
+            _brendName.Add(details);
+            connectionClass.DoWriteDetalClass(_brendName);
+            
         }
     }
 }

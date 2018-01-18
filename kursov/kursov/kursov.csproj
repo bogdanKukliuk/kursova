@@ -70,9 +70,13 @@
     <Compile Include="Context\Detal.cs" />
     <Compile Include="Context\User.cs" />
     <Compile Include="Converter.cs" />
-    <Compile Include="Migrations\201801171539444_123.cs" />
-    <Compile Include="Migrations\201801171539444_123.Designer.cs">
-      <DependentUpon>201801171539444_123.cs</DependentUpon>
+    <Compile Include="Migrations\201801181520407_12333.cs" />
+    <Compile Include="Migrations\201801181520407_12333.Designer.cs">
+      <DependentUpon>201801181520407_12333.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801181526205_asdfasdf.cs" />
+    <Compile Include="Migrations\201801181526205_asdfasdf.Designer.cs">
+      <DependentUpon>201801181526205_asdfasdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
@@ -124,8 +128,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201801171539444_123.resx">
-      <DependentUpon>201801171539444_123.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801181520407_12333.resx">
+      <DependentUpon>201801181520407_12333.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801181526205_asdfasdf.resx">
+      <DependentUpon>201801181526205_asdfasdf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -149,7 +156,7 @@
     <Resource Include="ImagesClassDetails\Двигун.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Home-Button.png" />
+    <Resource Include="Extras\Home-Button.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imagess\lada.jpg" />
