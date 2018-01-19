@@ -4,30 +4,73 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
-        mc:Ignorable="d"
-        Title="MainWindow" Background="BlueViolet" WindowState="Maximized" Loaded="Window_Loaded">
-    <Border Background="Black" CornerRadius="25" Margin="20">
-        <StackPanel>
-            <Grid Height="460">
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="734.5" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="BlueViolet" Width="1393" MinHeight="700" MinWidth="1200" >
+    <Window.Resources>
+        <Style TargetType="Image">
+            <Setter Property="Height" Value="170"/>
+            <Setter Property="Width" Value="180"/>
+        </Style>
+    </Window.Resources>
+    <Border Visibility="Visible" Background="Black" CornerRadius="25" MaxHeight="600" Margin="170,77,171,77" MaxWidth="1200">
+        <Grid Margin="0,0,6,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="79*"/>
+                <ColumnDefinition Width="190*"/>
+                <ColumnDefinition Width="504*"/>
+                <ColumnDefinition Width="128*"/>
+                <ColumnDefinition Width="123*"/>
+                <ColumnDefinition Width="14*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition MaxHeight="28" Height="8"/>
+                <RowDefinition Height="68"/>
+                <RowDefinition Height="29"/>
+                <RowDefinition MaxHeight="15" Height="18*"/>
+                <RowDefinition MaxHeight="28" Height="29*"/>
+                <RowDefinition MaxHeight="4" Height="5*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="btnHome" Source="Home-Button.png" Height="54" Width="Auto" MouseDown="btnHome_MouseDown" Margin="3,6,10,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <ComboBox x:Name="comBoxFlash" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,2,356,-25"/>
+            <Label Content="Швидкій вибір" Foreground="White" Grid.Row="4" Margin="0,2,356,2" FontSize="16" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+            <Button x:Name="btnSearch" IsEnabled="True" Content="Пошук" Grid.Column="3" Grid.Row="4" Margin="0,2,0,1"/>
+            <Button x:Name="btnBin" Content="Корзина" Grid.Column="4" Margin="1,2,0,0" Click="btnBin_Click" Grid.Row="2"/>
+            <Button x:Name="btnLogin" Content="Логін"  Grid.Row="2" Grid.Column="3" Margin="4,2,4,0"/>
+            <Grid MinWidth="800" Margin="0,30,0,-382" Grid.Row="5" Grid.ColumnSpan="6" >
+                <ListBox x:Name="BrandCar" Visibility="Visible" MinWidth="800" MaxWidth="1100"  Margin="0,10,-6,0" >
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxHeight="400" MaxWidth="1000"/>
+                        </ItemsPanelTemplate>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="483*"/>
-                    <ColumnDefinition Width="124*"/>
-                    <ColumnDefinition Width="113*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="42*"/>
-                    <RowDefinition Height="63*"/>
-                    <RowDefinition Height="183*"/>
-                    <RowDefinition Height="172*"/>
-                </Grid.RowDefinitions>
-                <ComboBox x:Name="comBoxFlash" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="224" Height="26" Grid.Row="1"/>
-                <Label Content="Швидкій вибір" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Width="178" Height="26" Grid.Row="1"/>
-                <Button x:Name="btnSearch" Content="Пошук" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="113" Height="26" Grid.Column="2" Grid.Row="1"/>
-                <Button x:Name="btnBin" Content="Корзина" Grid.Column="2" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="113" Height="29"/>
-                <Button x:Name="btnLogin" Content="Логін" HorizontalAlignment="Left" Margin="4,10,0,0" VerticalAlignment="Top" Width="115" Grid.Row="0" Grid.Column="1" Height="29"/>
+                    </ListBox.ItemsPanel>
+                    <Image x:Name="Reno" Source="Imagess\Reno.jpg" MouseDown="Reno_MouseDown"/>
+                    <Image x:Name="Sex" Source="Imagess\Jaguar.jpg" MouseDown="Sex_MouseDown"/>
+                    <Image x:Name="Bmw" Source="Imagess\BMW.jpg" MouseDown="Bmw_MouseDown"/>
+                    <Image x:Name="Lada" Source="Imagess\Lada.jpg" MouseDown="Lada_MouseDown"/>
+                    <Image x:Name="Toyota" Source="Imagess\toyota.jpg" MouseDown="Toyota_MouseDown"/>
+                    <Image x:Name="DOGE" Source="Imagess\DOGE.png" MouseDown="DOGE_MouseDown"/>
+                    <Image x:Name="Subaru" Source="Imagess\subaru.jpg" MouseDown="Subaru_MouseDown"/>
+                </ListBox>
+                <ListBox x:Name="ClassDetal" Visibility="Hidden" MinWidth="800" MaxWidth="1100" Margin="0,10,-6,0">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxHeight="400" MaxWidth="1000"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+
+                    <Image Source="ImagesClassDetails\Двигун.jpg" ToolTip="Це двигун"/>
+                    <Image Source="ImagesClassDetails\масло.jpg" ToolTip="Це масло для машини"/>
+                    <Image Source="ImagesClassDetails\коробка.jpg" ToolTip="Це коробка передач"/>
+                    <Image Source="ImagesClassDetails\шина.jpg" ToolTip="Це шини та колеса"/>
+                    <Image Source="ImagesClassDetails\подвеска.jpg" ToolTip="Це підвіска"/>
+                    <Image Source="ImagesClassDetails\тормоза.jpg" ToolTip="Це тормоза"/>
+                    <Image Source="ImagesClassDetails\електроніка.jpg" ToolTip="Це електорніка"/>
+                    <Image Source="ImagesClassDetails\кузов.png" ToolTip="Це КУЗОВ"/>
+                </ListBox>
             </Grid>
-        </StackPanel>
+
+        </Grid>
     </Border>
 
 

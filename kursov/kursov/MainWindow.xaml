@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursov"
         mc:Ignorable="d"
-        Title="MainWindow" Height="381.856" Width="364.513" Background="BlueViolet">
+        Title="MainWindow" Height="381.856" Width="364.513" WindowStartupLocation="CenterScreen" Background="BlueViolet">
     <Border Background="Black" CornerRadius="25" Margin="20">
         <StackPanel Margin="20">
             <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>

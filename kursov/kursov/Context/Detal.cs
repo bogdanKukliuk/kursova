@@ -8,16 +8,20 @@ using System.Threading.Tasks;
 
 namespace kursov.Context
 {
-    public class DetailsClass
+    public class Detal
     {
         [Key]
         public int ID { get; set; }
         [Required,MaxLength(length:200)]
-        public string NameDetalClass { get; set; }
+        public string NameDetal { get; set; }
         [Required]
-        public byte[] Picture { get; set; }
-        [ForeignKey("BrendCar")]
-        public int BrendCarId { get; set; }
-        public BrendCar BrendCar { get; set; }
+        public float Price { get; set; }
+        [ForeignKey("User")]
+        public int UserId { get; set; }
+        public User User { get; set; }
+        [ForeignKey("DetailsClass")]
+        public int DetailsClassId { get; set; }
+        
+        public DetailsClass DetailsClass { get; set; }
     }
 }

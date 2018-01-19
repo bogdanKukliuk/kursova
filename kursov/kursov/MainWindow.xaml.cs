@@ -44,14 +44,17 @@ namespace kursov
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
             mainMenu = new MainMenu();
-
+            Hide();
+            this.mainMenu.ShowDialog();
+            Close();
+            /*
             if (!backgroundWorker.IsBusy)
             {
                 backgroundWorker.RunWorkerAsync();
                 //DoConnect(null, null);
             }
             else
-                backgroundWorker.CancelAsync();
+                backgroundWorker.CancelAsync();*/
 
         }
 
@@ -68,7 +71,7 @@ namespace kursov
                     return txtPassword.Password;
                 }));
 
-                var user = _efContext.Login.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
+                var user = _efContext.User.Include(r => r.Role).SingleOrDefault(u => u.Password == password &&
                   u.Email == email);
 
                 if (user != null)
@@ -113,5 +116,6 @@ namespace kursov
             registrationForm = new RegistrationForm();
             registrationForm.ShowDialog();
         }
+        
     }
 }

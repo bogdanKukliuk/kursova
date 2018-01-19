@@ -5,15 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace kursov.Context
 {
-    public class Role
+    public class BrendCar
     {
         [Key]
         public int ID { get; set; }
-        [Required, MaxLength(length: 20)]
-        public string RoleName { get; set; }
-        public ICollection<User> User { get; set; }
+        [Required,MaxLength(length:200)]
+        public string NameCar { get; set; }
     }
 }

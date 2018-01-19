@@ -39,21 +39,21 @@ namespace kursov
                 }
                 else
                 {
-                    var user = new Login
+                    var user = new User
                     {
                         Email = txtEmail.Text,
                         Password = txtPassword_R.Password,
                         Money = 0,
                         Name = txtName.Text
                     };
-                    _context.Login.Add(user);
+                    _context.User.Add(user);
                     _context.SaveChanges();
 
-                    var role = _context.Role.Include(l => l.Login).SingleOrDefault(r => r.RoleName == "User");
+                    var role = _context.Role.Include(l => l.User).SingleOrDefault(r => r.RoleName == "User");
                     
                     if(role != null)
                     {
-                        role.Login.Add(user);
+                        role.User.Add(user);
                         _context.SaveChanges();
                     }
                     //MessageBox.Show(user.Email + user.Password + user.Money + user.Name + role.RoleName + role.Login.ToString());

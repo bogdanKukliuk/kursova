@@ -5,13 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-
 namespace kursov.Context
 {
-    public class Login
+    public class User
     {
-        public Login() { }
+        public User() { }
         public int ID { get; set; }
         [Required, MaxLength(length: 228)]
         public string Email { get; set; }

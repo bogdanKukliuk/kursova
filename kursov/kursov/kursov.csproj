@@ -43,6 +43,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,14 +62,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Migrations\201712271402537_doe.cs" />
-    <Compile Include="Migrations\201712271402537_doe.Designer.cs">
-      <DependentUpon>201712271402537_doe.cs</DependentUpon>
+    <Compile Include="Bin.xaml.cs">
+      <DependentUpon>Bin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectionClass.cs" />
+    <Compile Include="Context\BrendCar.cs" />
+    <Compile Include="Context\Detal.cs" />
+    <Compile Include="Context\User.cs" />
+    <Compile Include="Converter.cs" />
+    <Compile Include="Migrations\201801181520407_12333.cs" />
+    <Compile Include="Migrations\201801181520407_12333.Designer.cs">
+      <DependentUpon>201801181520407_12333.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201801181526205_asdfasdf.cs" />
+    <Compile Include="Migrations\201801181526205_asdfasdf.Designer.cs">
+      <DependentUpon>201801181526205_asdfasdf.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="RegistrationForm.xaml.cs">
       <DependentUpon>RegistrationForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="Bin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -83,7 +100,6 @@
     </Compile>
     <Compile Include="Context\DetailsClass.cs" />
     <Compile Include="Context\EFContext.cs" />
-    <Compile Include="Context\Login.cs" />
     <Compile Include="Context\Register.cs" />
     <Compile Include="Context\Role.cs" />
     <Compile Include="MainMenu.xaml.cs">
@@ -112,8 +128,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\201712271402537_doe.resx">
-      <DependentUpon>201712271402537_doe.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201801181520407_12333.resx">
+      <DependentUpon>201801181520407_12333.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801181526205_asdfasdf.resx">
+      <DependentUpon>201801181526205_asdfasdf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,6 +148,58 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\Reno.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\Двигун.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Extras\Home-Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\lada.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\BMW.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\Jaguar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\volkswagen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagess\subaru.jpg" />
+    <Resource Include="Imagess\bentley.jpg" />
+    <Resource Include="Imagess\nisan.jpg" />
+    <Resource Include="Imagess\toyota.jpg" />
+    <Resource Include="Imagess\DOGE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\електроніка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\кузов.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\масло.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\коробка.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\шина.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\тормоза.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\подвеска.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ImagesClassDetails\avto.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
