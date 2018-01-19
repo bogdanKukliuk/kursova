@@ -47,8 +47,8 @@ namespace kursov
 
             if (!backgroundWorker.IsBusy)
             {
-                //backgroundWorker.RunWorkerAsync();
-                DoConnect(null, null);
+                backgroundWorker.RunWorkerAsync();
+                //DoConnect(null, null);
             }
             else
                 backgroundWorker.CancelAsync();
@@ -91,6 +91,7 @@ namespace kursov
                     
                 }
                 MessageBox.Show($"Entered Wrong data {user.Name + user.Password + user.Email}");
+                backgroundWorker.CancelAsync();
                 return;
             }
             catch (Exception ex)
