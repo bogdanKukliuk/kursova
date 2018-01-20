@@ -16,7 +16,8 @@
         <Grid Margin="0,0,6,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="79*"/>
-                <ColumnDefinition Width="190*"/>
+                <ColumnDefinition Width="102*"/>
+                <ColumnDefinition Width="88*"/>
                 <ColumnDefinition Width="504*"/>
                 <ColumnDefinition Width="128*"/>
                 <ColumnDefinition Width="123*"/>
@@ -30,13 +31,14 @@
                 <RowDefinition MaxHeight="28" Height="29*"/>
                 <RowDefinition MaxHeight="4" Height="5*"/>
             </Grid.RowDefinitions>
-            <Image x:Name="btnHome" Source="Home-Button.png" Height="54" Width="Auto" MouseDown="btnHome_MouseDown" Margin="3,6,10,0" VerticalAlignment="Top" Grid.Row="1"/>
-            <ComboBox x:Name="comBoxFlash" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,2,356,-25"/>
-            <Label Content="Швидкій вибір" Foreground="White" Grid.Row="4" Margin="0,2,356,2" FontSize="16" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
-            <Button x:Name="btnSearch" IsEnabled="True" Content="Пошук" Grid.Column="3" Grid.Row="4" Margin="0,2,0,1"/>
-            <Button x:Name="btnBin" Content="Корзина" Grid.Column="4" Margin="1,2,0,0" Click="btnBin_Click" Grid.Row="2"/>
-            <Button x:Name="btnLogin" Content="Логін"  Grid.Row="2" Grid.Column="3" Margin="4,2,4,0"/>
-            <Grid MinWidth="800" Margin="0,30,0,-382" Grid.Row="5" Grid.ColumnSpan="6" >
+            <Image Source="Extras\back.png" Height="Auto" Margin="0,6,0,9" Grid.Row="1" Width="Auto" Grid.Column="1" MouseDown="btnBack_MouseDown"/>
+            <Image x:Name="btnHome" Source="Extras\Home-Button.png" Height="54" Width="Auto" MouseDown="btnHome_MouseDown" Margin="3,6,10,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <ComboBox x:Name="comBoxFlash" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Margin="0,2,356,-25"/>
+            <Label Content="Швидкій вибір" Foreground="White" Grid.Row="4" Margin="0,2,356,2" FontSize="16" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+            <Button x:Name="btnSearch" IsEnabled="True" Content="Пошук" Grid.Column="4" Grid.Row="4" Margin="0,2,0,1"/>
+            <Button x:Name="btnBin" Content="Корзина" Grid.Column="5" Margin="1,2,0,0" Click="btnBin_Click" Grid.Row="2"/>
+            <Button x:Name="btnLogin" Content="Логін" Click="btnLogin_Click"  Grid.Row="2" Grid.Column="4" Margin="4,2,4,0"/>
+            <Grid MinWidth="800" Margin="0,30,0,-382" Grid.Row="5" Grid.ColumnSpan="7" >
                 <ListBox x:Name="BrandCar" Visibility="Visible" MinWidth="800" MaxWidth="1100"  Margin="0,10,-6,0" >
                     <ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -58,18 +60,24 @@
                             <WrapPanel IsItemsHost="True" Orientation="Horizontal" MaxHeight="400" MaxWidth="1000"/>
                         </ItemsPanelTemplate>
                     </ListBox.ItemsPanel>
-
-                    <Image Source="ImagesClassDetails\Двигун.jpg" ToolTip="Це двигун"/>
-                    <Image Source="ImagesClassDetails\масло.jpg" ToolTip="Це масло для машини"/>
-                    <Image Source="ImagesClassDetails\коробка.jpg" ToolTip="Це коробка передач"/>
-                    <Image Source="ImagesClassDetails\шина.jpg" ToolTip="Це шини та колеса"/>
-                    <Image Source="ImagesClassDetails\подвеска.jpg" ToolTip="Це підвіска"/>
-                    <Image Source="ImagesClassDetails\тормоза.jpg" ToolTip="Це тормоза"/>
-                    <Image Source="ImagesClassDetails\електроніка.jpg" ToolTip="Це електорніка"/>
-                    <Image Source="ImagesClassDetails\кузов.png" ToolTip="Це КУЗОВ"/>
+                    <Image Source="ImagesClassDetails\Двигун.jpg" ToolTip="Це двигун" MouseDown="motor_MouseDown"/>
+                    <Image Source="ImagesClassDetails\масло.jpg" ToolTip="Це масло для машини" MouseDown="oil_MouseDown" RenderTransformOrigin="0.528,0.5"/>
+                    <Image Source="ImagesClassDetails\коробка.jpg" ToolTip="Це коробка передач" MouseDown="transmission_MouseDown"/>
+                    <Image Source="ImagesClassDetails\шина.jpg" ToolTip="Це шини та колеса" MouseDown="wheel_MouseDown"/>
+                    <Image Source="ImagesClassDetails\подвеска.jpg" ToolTip="Це підвіска" MouseDown="damper_MouseDown"/>
+                    <Image Source="ImagesClassDetails\тормоза.jpg" ToolTip="Це тормоза" MouseDown="brakes_MouseDown"/>
+                    <Image Source="ImagesClassDetails\електроніка.jpg" ToolTip="Це електорніка" MouseDown="electronics_MouseDown"/>
+                    <Image Source="ImagesClassDetails\кузов.png" ToolTip="Це КУЗОВ" MouseDown="body_MouseDown"/>
                 </ListBox>
+                <DataGrid x:Name="Detal" Visibility="Hidden">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Photo" Width="200"/>
+                        <DataGridTextColumn Header="Name" Width="300"/>
+                        <DataGridTextColumn Header="Price" Width="150"/>
+                        <DataGridTextColumn Header="Description" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </Grid>
-
         </Grid>
     </Border>
 

@@ -39,72 +39,92 @@ namespace kursov
 
         private void btnBin_Click(object sender, RoutedEventArgs e)
         {
-            /*
+            
             Bin bin = new Bin();
             bin.ShowDialog();
-            Close();*/
+            Close();
         }
 
         private void Sex_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 3;
-            ShowDetal();
+            ShowClassDetal();
         }
 
         private void Reno_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 6;
-            ShowDetal();
+            ShowClassDetal();
         }
 
         private void Bmw_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 2;
-            ShowDetal();
+            ShowClassDetal();
         }
 
         private void Lada_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 1;
-            ShowDetal();
+            ShowClassDetal();
         }
-
-
 
         private void Toyota_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 9;
-            ShowDetal();
+            ShowClassDetal();
         }
 
         private void DOGE_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 4;
-            ShowDetal();
+            ShowClassDetal();
         }
 
         private void Subaru_MouseDown(object sender, MouseButtonEventArgs e)
         {
             indificator = 7;
-            ShowDetal();
+            ShowClassDetal();
         }
 
-        private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
+        private void btnBack_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (this.ClassDetal.Visibility == Visibility.Visible)
+            if(this.Detal.Visibility == Visibility.Visible)
             {
+                Detal.Visibility = Visibility.Hidden;
+                ClassDetal.Visibility = Visibility.Visible;
+            }
+            else if(this.ClassDetal.Visibility == Visibility.Visible)
+            {
+                ClassDetal.Visibility = Visibility.Hidden;
+                BrandCar.Visibility = Visibility.Visible;
+            }
+        }
+            private void btnHome_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.ClassDetal.Visibility == Visibility.Visible || this.Detal.Visibility == Visibility.Visible)
+            {
+                Detal.Visibility = Visibility.Hidden;
                 ClassDetal.Visibility = Visibility.Hidden;
                 BrandCar.Visibility = Visibility.Visible;
                 indificator = 0;
             }
         }
 
-        private void ShowDetal()
+        private void ShowClassDetal()
         {
             if (this.ClassDetal.Visibility == Visibility.Hidden)
             {
                 ClassDetal.Visibility = Visibility.Visible;
                 BrandCar.Visibility = Visibility.Hidden;
+            }
+        }
+        private void ShowDetal()
+        {
+            if(this.Detal.Visibility == Visibility.Hidden)
+            {
+                Detal.Visibility = Visibility.Visible;
+                ClassDetal.Visibility = Visibility.Hidden;
             }
         }
 
@@ -122,6 +142,47 @@ namespace kursov
             _brendName.Add(details);
             connectionClass.DoWriteDetalClass(_brendName);
             
+        }
+
+        private void brakes_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void electronics_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void oil_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void transmission_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void wheel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void damper_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void body_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+        private void motor_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            ShowDetal();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.ShowDialog();
+            Close();
         }
     }
 }

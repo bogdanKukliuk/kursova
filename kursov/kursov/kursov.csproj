@@ -201,5 +201,8 @@
   <ItemGroup>
     <Resource Include="ImagesClassDetails\avto.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Extras\back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
